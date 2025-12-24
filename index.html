@@ -1,22 +1,92 @@
-<html>
-  <head>
-    <title>
-      liliane
-    </title>
-    <style>
-      body{
-        background-color: skyblue;
-        animation-name: lily;
-        animation-duration: 4s;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liliane</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(270deg, skyblue, #6a11cb, #2575fc);
+      background-size: 600% 600%;
+      animation: backgroundMove 10s ease infinite;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      color: #2575fc;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .contact {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #6a11cb;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 16px;
+      background: #2575fc;
+      color: white;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
-      @key-frames lily{
-        background-color: black;
-        color: white;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-    </style>
-  </head>
-   <body>
-     I AM LILIANE TURIKUMWENIMANA A FULL STACK DEVELOPER <br>
-     you can contact me on +250796304485 I'm ready to work part time.
-   </body>
+    }
+
+    @keyframes backgroundMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Liliane Turikumwenimana</h1>
+
+    <p>
+      Full Stack Developer passionate about building modern and efficient web applications.
+    </p>
+
+    <p class="contact">
+      📞 Contact: +250 796 304 485
+    </p>
+
+    <span class="badge">Available for Part-Time Work</span>
+  </div>
+</body>
 </html>
